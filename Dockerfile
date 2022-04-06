@@ -6,4 +6,4 @@ WORKDIR boxfuse-sample-java-war-hello
 RUN mvn package && \
     cd target && \
     cp hello-1.0.war /var/lib/tomcat9/webapps \
-CMD ["/var/lib/tomcat9/webapps/hello-1.0.war", "bash"]
+CMD ["bash /var/lib/tomcat9/webapps/hello-1.0.war"]
