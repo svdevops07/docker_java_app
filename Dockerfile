@@ -5,8 +5,8 @@ RUN apt update && \
     tar -zxf apache-tomcat-10.0.20.tar.gz && \
     cd apache-tomcat-10.0.20/bin
 CMD ["catalina.sh", "run"]
-RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-WORKDIR boxfuse-sample-java-war-hello
+RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && \
+    cd boxfuse-sample-java-war-hello
 RUN mvn package && \
     cd target && \
-    cp hello-1.0.war /root/apache-tomcat-10.0.20/webapps
+    cp hello-1.0.war ~/apache-tomcat-10.0.20/webapps
