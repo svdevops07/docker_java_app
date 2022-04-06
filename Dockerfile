@@ -5,4 +5,4 @@ RUN apt-get update && \
 WORKDIR boxfuse-sample-java-war-hello
 RUN mvn package && \
     cd target && \
-    cp hello-1.0.war /var/lib/tomcat9/webapps/
+    cp hello-1.0.war /var/lib/tomcat9/webapps
