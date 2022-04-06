@@ -5,5 +5,5 @@ RUN apt update && \
 WORKDIR boxfuse-sample-java-war-hello
 RUN mvn package && \
     cd target && \
-    cp hello-1.0.war /var/lib/tomcat9/webapps \
-CMD ["bash /var/lib/tomcat9/webapps/hello-1.0.war"]
+    cp hello-1.0.war /var/lib/tomcat9/webapps
+CMD ["/var/lib/tomcat9/webapps/hello-1.0.war", "run"]
