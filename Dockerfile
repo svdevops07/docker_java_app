@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 RUN apt update && \
-    apt install -y default-jdk maven git && \
+    apt install -y default-jdk maven git wget && \
     wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz && \
     tar -zxf apache-tomcat-10.0.20.tar.gz && \
     cd apache-tomcat-10.0.20/bin
