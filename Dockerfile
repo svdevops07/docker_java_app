@@ -3,7 +3,7 @@ RUN apt update && \
     apt install -y default-jdk maven git wget
 WORKDIR /var/java_app
 RUN wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz && \
-    tar -zxf apache-tomcat-10.0.20.tar.gz - C /var/java_app
+    tar -zxf apache-tomcat-10.0.20.tar.gz -C /var/java_app
 CMD ["/var/java_app/apache-tomcat-10.0.20/bin/catalina.sh", "run"]
 WORKDIR /data
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && \
