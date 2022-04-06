@@ -1,8 +1,8 @@
 FROM ubuntu:18.04
 RUN apt update && \
-    apt install -y default-jdk maven git wget && \
-    cd /var/java_app && \
-    wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz && \
+    apt install -y default-jdk maven git wget
+WORKDIR /var/java_app
+RUN wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz && \
     tar -zxf apache-tomcat-10.0.20.tar.gz - C /var/java_app && \
     cd /var/java_app/apache-tomcat-10.0.20/bin
 CMD ["/var/java_app/apache-tomcat-10.0.20/bin/catalina.sh", "run"]
