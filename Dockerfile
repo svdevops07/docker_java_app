@@ -10,4 +10,4 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && \
     cd /data/boxfuse-sample-java-war-hello && \
     mvn package && \
     cd target && \
-    cp hello-1.0.war ~/apache-tomcat-10.0.20/webapps
+    cp hello-1.0.war /var/java_app/apache-tomcat-10.0.20/apache-tomcat-10.0.20/webapps
