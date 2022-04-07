@@ -10,4 +10,5 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && \
     mvn package && \
     cd target && \
     cp hello-1.0.war /var/java_app/apache-tomcat-10.0.20/webapps
+EXPOSE 8080
 CMD ["/var/java_app/apache-tomcat-10.0.20/bin/catalina.sh", "run"]
